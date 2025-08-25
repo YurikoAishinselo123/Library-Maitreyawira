@@ -144,7 +144,7 @@ if (!isset($_SESSION['username'])) {
                 </div>
                 <div class="input-group input-group-static mb-3">
                   <label>Stok</label>
-                  <input type="number" name="stok" class="form-control">
+                  <input type="number" name="stok_buku" class="form-control">
                 </div>
             </div>
             <div class="px-4 py-1">

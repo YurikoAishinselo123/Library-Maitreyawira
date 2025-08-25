@@ -6,10 +6,10 @@ if ($_POST['proses']) {
     $penerbit_buku = $_POST['penerbit_buku'];
     $tahun_terbit = $_POST['tahun_terbit'];
     $nisn = $_POST['nisn'];
-    $stok = $_POST['stok'];
+    $stok_buku = $_POST['stok_buku'];
     $query = mysqli_query($db, "insert into tabel_buku(judul_buku, penulis_buku, penerbit_buku,
     tahun_terbit, nisn, stok_buku) values('$judul_buku', '$penulis_buku', '$penerbit_buku',
-    '$tahun_terbit', '$nisn', '$stok')");
+    '$tahun_terbit', '$nisn', '$stok_buku')");
     if ($query) {
         echo"<script>alert('Data berhasil dimasukkan!);
         window.history.back();</script>";
