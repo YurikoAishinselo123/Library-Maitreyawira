@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Aug 26, 2025 at 01:43 PM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 7.4.29
+-- Host: localhost
+-- Generation Time: Aug 26, 2025 at 04:26 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,7 +33,7 @@ CREATE TABLE `tabel_anggota` (
   `tanggal_lahir` date NOT NULL,
   `jenis_kelamin` varchar(16) NOT NULL,
   `NIS` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -49,15 +49,15 @@ CREATE TABLE `tabel_buku` (
   `tahun_terbit` int(11) NOT NULL,
   `nisn` int(11) NOT NULL,
   `stok_buku` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tabel_buku`
 --
 
 INSERT INTO `tabel_buku` (`id_buku`, `judul_buku`, `penulis_buku`, `penerbit_buku`, `tahun_terbit`, `nisn`, `stok_buku`) VALUES
-(1, 'test1', 'test2', 'test3', 2020, 32274550, 3),
-(2, 'test2', 'test3', 'test4', 3, 322745, 6);
+(1, 'dfdfdd', 'dfdfafadf', 'dfdfdfdf', 2222, 222, 2223),
+(2, 'afdf', 'dfafdf', 'dfadfolll', 220202, 202002, 2020);
 
 -- --------------------------------------------------------
 
@@ -72,7 +72,7 @@ CREATE TABLE `tabel_transaksi` (
   `id_anggota` int(11) NOT NULL,
   `status_transaksi` varchar(16) NOT NULL,
   `tanggal_pengembalian` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -84,7 +84,7 @@ CREATE TABLE `tabel_user` (
   `id_user` int(10) NOT NULL,
   `nama_user` varchar(30) NOT NULL,
   `password_user` varchar(64) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tabel_user`
@@ -98,22 +98,10 @@ INSERT INTO `tabel_user` (`id_user`, `nama_user`, `password_user`) VALUES
 --
 
 --
--- Indexes for table `tabel_anggota`
---
-ALTER TABLE `tabel_anggota`
-  ADD PRIMARY KEY (`id_anggota`);
-
---
 -- Indexes for table `tabel_buku`
 --
 ALTER TABLE `tabel_buku`
   ADD PRIMARY KEY (`id_buku`);
-
---
--- Indexes for table `tabel_transaksi`
---
-ALTER TABLE `tabel_transaksi`
-  ADD PRIMARY KEY (`id_transaksi`);
 
 --
 -- Indexes for table `tabel_user`
@@ -126,22 +114,10 @@ ALTER TABLE `tabel_user`
 --
 
 --
--- AUTO_INCREMENT for table `tabel_anggota`
---
-ALTER TABLE `tabel_anggota`
-  MODIFY `id_anggota` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `tabel_buku`
 --
 ALTER TABLE `tabel_buku`
   MODIFY `id_buku` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `tabel_transaksi`
---
-ALTER TABLE `tabel_transaksi`
-  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tabel_user`
