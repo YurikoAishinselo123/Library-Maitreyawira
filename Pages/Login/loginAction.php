@@ -11,12 +11,12 @@ $check = mysqli_num_rows($login);
 if ($check > 0) {
     $data = mysqli_fetch_assoc($login);
     $_SESSION['username'] = $username;
-header("location: ../../index.php");
+    header("location: ../../index.php");
     // echo "<script>
     //         alert('✅ Login Success');
     //         window.history.back(); // ⬅️ this goes back to previous page
     //       </script>";
-} else {       
+} else {
     echo "<script>
             alert('❌ Gagal Login');
             window.history.back();
