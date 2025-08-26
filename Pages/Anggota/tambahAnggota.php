@@ -1,5 +1,5 @@
 <form method="post" action="main.php?page=actionDaftarProject" enctype="multipart/form-data">
-    <h1>Anggota Baru</h1>
+    <h3>Anggota Baru</h3>
     <br>
     <div class="form-row">
         <!-- NIS -->

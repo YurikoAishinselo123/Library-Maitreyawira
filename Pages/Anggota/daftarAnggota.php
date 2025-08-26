@@ -4,7 +4,7 @@
 </div>
 
 <div class="table-responsive">
-  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+  <table class="table table-bordered" width="100%" cellspacing="0">
     <thead>
       <tr>
         <th>No</th>
@@ -12,32 +12,15 @@
         <th>Nama Anggota</th>
         <th>Tanggal Lahir</th>
         <th>Jenis Kelamin</th>
-        <th>
-          <center>Menu</center>
-        </th>
+        <th class="text-center">Menu</th>
       </tr>
     </thead>
     <tbody>
-      <!-- Example dummy data -->
-      <tr>
-        <td>1</td>
-        <td>PJ001</td>
-        <td>Yuriko Aishinselo</td>
-        <td>2025-09-01</td>
-        <td>Laki-laki</td>
-        <td>
-          <center>
-            <a href="#" class="btn btn-sm btn-success">Edit</a>
-            <a href="#" class="btn btn-sm btn-danger">Hapus</a>
-          </center>
-        </td>
-      </tr>
-
       <?php
       include "koneksi.php";
-      $sql = "SELECT * FROM tblAnggota";
+      $sql = "SELECT * FROM tabel_anggota";
       $query = mysqli_query($db, $sql);
-      $nomor = 2; // start numbering after dummy rows
+      $nomor = 1; // start numbering
       while ($data = mysqli_fetch_array($query)) {
         ?>
         <tr>
@@ -46,14 +29,12 @@
           <td><?php echo $data['namaAnggota']; ?></td>
           <td><?php echo $data['tglLahir']; ?></td>
           <td><?php echo $data['gender']; ?></td>
-          <td>
-            <center>
-              <a href="index.php?page=editAnggota&id=<?php echo $data['kodeAnggota']; ?>"
-                class="btn btn-sm btn-success">Edit</a>
-              <a href="index.php?page=hapusAnggota&id=<?php echo $data['kodeAnggota']; ?>"
-                onclick="return confirm('Apakah Anda yakin ingin menghapus anggota ini?')"
-                class="btn btn-sm btn-danger">Hapus</a>
-            </center>
+          <td class="text-center">
+            <a href="index.php?page=editAnggota&id=<?php echo $data['kodeAnggota']; ?>"
+              class="btn btn-sm btn-success">Edit</a>
+            <a href="index.php?page=hapusAnggota&id=<?php echo $data['kodeAnggota']; ?>"
+              onclick="return confirm('Apakah Anda yakin ingin menghapus anggota ini?')"
+              class="btn btn-sm btn-danger">Hapus</a>
           </td>
         </tr>
         <?php

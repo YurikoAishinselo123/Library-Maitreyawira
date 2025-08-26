@@ -49,36 +49,36 @@ if (!isset($_SESSION['username'])) {
       <!-- Divider -->
       <hr class="sidebar-divider my-0" />
 
-      <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
+      <?php $page = $_GET['page'] ?? 'dashboard'; ?>
+
+      <li class="nav-item <?= $page == 'dashboard' ? 'active' : '' ?>">
         <a class="nav-link" href="index.php?page=dashboard">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span>
         </a>
-
       </li>
 
-      <!-- Add new Navbar -->
-      <li class="nav-item">
+      <li class="nav-item <?= $page == 'daftarAnggota' ? 'active' : '' ?>">
         <a class="nav-link" href="index.php?page=daftarAnggota">
           <i class="fas fa-fw fa-users"></i>
           <span>Anggota</span>
         </a>
       </li>
 
-      <li class="nav-item">
+      <li class="nav-item <?= $page == 'daftarBuku' ? 'active' : '' ?>">
         <a class="nav-link" href="index.php?page=daftarBuku">
           <i class="fas fa-fw fa-book"></i>
           <span>Buku</span>
         </a>
       </li>
 
-      <li class="nav-item">
+      <li class="nav-item <?= $page == 'daftarTransaksi' ? 'active' : '' ?>">
         <a class="nav-link" href="index.php?page=daftarTransaksi">
           <i class="fas fa-fw fa-book-reader"></i>
           <span>Transaksi</span>
         </a>
       </li>
+
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block" />
@@ -160,28 +160,37 @@ if (!isset($_SESSION['username'])) {
                 include "Pages/Anggota/daftarAnggota.php";
                 break;
               case 'tambahAnggota':
-                include "pages/Anggota/tambahAnggota.php";
+                include "Pages/Anggota/tambahAnggota.php";
                 break;
               case 'editAnggota':
-                include "pages/Anggota/editAnggota.php";
+                include "Pages/Anggota/editAnggota.php";
                 break;
               case 'daftarBuku':
-                include "pages/Buku/daftarBuku.php";
+                include "Pages/Buku/daftarBuku.php";
                 break;
               case 'tambahBuku':
-                include "pages/Anggota/tambahBuku.php";
+                include "Pages/Buku/tambahBuku.php";
+                break;
+              case 'tambahBukuLogic':
+                include "Pages/Buku/tambahBukuLogic.php";
                 break;
               case 'editBuku':
-                include "pages/Anggota/edit.php";
+                include "Pages/Buku/editBuku.php";
+                break;
+              case 'editBukuLogic':
+                include "Pages/Buku/editBukuLogic.php";
+                break;
+              case 'hapusBukuLogic':
+                include "Pages/Buku/hapusBukuLogic.php";
                 break;
               case 'daftarTransaksi':
-                include "pages/Buku/daftarTransaksi.php";
+                include "Pages/Buku/daftarTransaksi.php";
                 break;
               case 'tambahTransaksi':
-                include "pages/Anggota/tambahTransaksi.php";
+                include "Pages/Anggota/tambahTransaksi.php";
                 break;
               case 'editTransaksi':
-                include "pages/Anggota/editTransaksi.php";
+                include "Pages/Anggota/editTransaksi.php";
                 break;
 
               default:
@@ -249,11 +258,11 @@ if (!isset($_SESSION['username'])) {
   <script src="Global/js/sb-admin-2.min.js"></script>
 
   <!-- Page level plugins -->
-  <script src="Global/vendor/chart.js/Chart.min.js"></script>
+  <!-- <script src="Global/vendor/chart.js/Chart.min.js"></script> -->
 
   <!-- Page level custom scripts -->
-  <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
+  <!-- <script src="Global/js/demo/chart-area-demo.js"></script>
+  <script src="Global/js/demo/chart-pie-demo.js"></script> -->
 </body>
 
 </html>

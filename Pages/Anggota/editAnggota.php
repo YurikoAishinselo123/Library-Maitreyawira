@@ -1,7 +1,7 @@
 <?php
 include "koneksi.php";
 $id = $_GET['idb']; 
-$sql = mysqli_query($db, "SELECT * FROM tblAnggota WHERE kodeAnggota = '$id'");
+$sql = mysqli_query($db, "SELECT * FROM tabel_anggota WHERE kodeAnggota = '$id'");
 $data = mysqli_fetch_array($sql);
 ?>
 
