@@ -49,7 +49,7 @@ $data = mysqli_fetch_array($query);
 
         <div class="col-md-12 mt-3">
             <input type="submit" name="proses" value="Confirm" class="btn btn-primary">
-            <a href="index.php?page=daftarAnggota" class="btn btn-sm btn-danger px-3 py-1">Cancel</a>
+            <a href="index.php?page=daftarAnggota" class="btn btn-danger px-3 py-1">Cancel</a>
         </div>
 
     </div>
