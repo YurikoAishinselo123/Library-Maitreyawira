@@ -193,13 +193,22 @@ if (!isset($_SESSION['username'])) {
                 include "Pages/Buku/hapusBukuLogic.php";
                 break;
               case 'daftarTransaksi':
-                include "Pages/Buku/daftarTransaksi.php";
+                include "Pages/Transaksi/daftarTransaksi.php";
                 break;
               case 'tambahTransaksi':
-                include "Pages/Anggota/tambahTransaksi.php";
+                include "Pages/Transaksi/tambahTransaksi.php";
                 break;
               case 'editTransaksi':
-                include "Pages/Anggota/editTransaksi.php";
+                include "Pages/Transaksi/editTransaksi.php";
+                break;
+              case 'tambahTransaksiLogic':
+                include "Pages/Transaksi/tambahTransaksiLogic.php";
+                break;
+              case 'editTransaksiLogic':
+                include "Pages/Transaksi/editTransaksiLogic.php";
+                break;
+              case 'hapusBukuLogic':
+                include "Pages/Transaksi/hapusTransaksiLogic.php";
                 break;
 
               default:
