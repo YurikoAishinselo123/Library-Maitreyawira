@@ -35,6 +35,7 @@
         <!-- Submit Button -->
         <div class="col-md-12 mt-3">
             <input type="submit" name="proses" value="Tambah" class="btn btn-primary px-3 py-1">
+            <a href="index.php?page=daftarAnggota" class="btn btn-danger px-3 py-1">Cancel</a>
         </div>
     </div>
 </form>
