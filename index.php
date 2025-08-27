@@ -162,8 +162,17 @@ if (!isset($_SESSION['username'])) {
               case 'tambahAnggota':
                 include "Pages/Anggota/tambahAnggota.php";
                 break;
+              case 'tambahAnggotaLogic':
+                include "Pages/Anggota/tambahAnggotaLogic.php";
+                break;
               case 'editAnggota':
                 include "Pages/Anggota/editAnggota.php";
+                break;
+              case 'editAnggotaLogic':
+                include "Pages/Anggota/editAnggotaLogic.php";
+                break;
+              case 'hapusAnggotaLogic':
+                include "Pages/Anggota/hapusAnggotaLogic.php";
                 break;
               case 'daftarBuku':
                 include "Pages/Buku/daftarBuku.php";
