@@ -24,6 +24,8 @@ $data = mysqli_fetch_array($query);?>
         <div class="col-md-12 mb-3">
             <label><b>Nama Buku</b></label>
             <input type="text" name="" class="form-control" value="<?= $data['judul_buku'] ?>" readonly>
+            <input type="hidden" name="id_buku" value="<?= $data['id_buku']?>">
+
         </div>
 
         </div>
@@ -38,12 +40,12 @@ $data = mysqli_fetch_array($query);?>
         <div class="col-md-12 mb-3">
             <label><b>Status Transaksi</b></label><br>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="status_transaksi" id="genderL" value="Laki-laki"
+                <input class="form-check-input" type="radio" name="status_transaksi" id="genderL" value="Dipinjam"
                     >
                 <label class="form-check-label" for="genderL">Dipinjam</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="jenis_kelamin" id="genderP" value="Perempuan"
+                <input class="form-check-input" type="radio" name="status_transaksi" id="genderP" value="Dikembalikan"
                     >
                 <label class="form-check-label" for="genderP">Dikembalikan</label>
             </div>

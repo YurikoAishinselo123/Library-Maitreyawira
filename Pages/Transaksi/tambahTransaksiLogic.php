@@ -8,14 +8,20 @@ include "koneksi.php";
 
     $sql = "INSERT INTO tabel_transaksi (tanggal_peminjaman, id_buku, id_anggota, status_transaksi, tanggal_pengembalian) 
             VALUES ('$tanggal_peminjaman', '$id_buku', '$id_anggota', '$status_transaksi', '$tanggal_pengembalian')";
+    $sql2 = "UPDATE tabel_buku set stok_buku = stok_buku-1 WHERE tabel_buku.id_buku = '$id_buku'";
 
-    $query = mysqli_query($db, $sql);
+    $query_input = mysqli_query($db, $sql);
+    $query_editStok = mysqli_query($db,$sql2);
 
-    if ($query) {
-        echo "<script>
+    if ($query_input) {
+        if($query_editStok){
+            echo "<script>
             alert('Transaksi berhasil ditambahkan!');
             window.location='index.php?page=daftarTransaksi';
         </script>";
+        } else {
+            die("Query Error: " . mysqli_error($db));
+        }
     } else {
         die("Query Error: " . mysqli_error($db));
     }

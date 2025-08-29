@@ -40,14 +40,14 @@
 
         <!-- Jenis Kelamin -->
         <div class="col-md-12 mb-3">
-            <label><b>Status Peminjaman</b></label><br>
+            <label><b>Status Transaksi</b></label><br>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="status_peminjaman" id="genderL" value="Laki-laki"
+                <input class="form-check-input" type="radio" name="status_transaksi" id="genderL" value="Dipinjam"
                     required>
                 <label class="form-check-label" for="genderL">Dipinjam</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="jenis_kelamin" id="genderP" value="Perempuan"
+                <input class="form-check-input" type="radio" name="jenis_kelamin" id="genderP" value="Dikembalikan"
                     disabled>
                 <label class="form-check-label" for="genderP">Dikembalikan</label>
             </div>
