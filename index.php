@@ -2,7 +2,6 @@
 session_start();
 
 if (!isset($_SESSION['username'])) {
-  // If not logged in, go back to login page
   echo "<script language='JavaScript'>
     confirm('Login Terlebih Dahulu');
     document.location='Pages/Login/login.php'</script>";
@@ -61,21 +60,21 @@ if (!isset($_SESSION['username'])) {
       <li class="nav-item <?= $page == 'daftarAnggota' ? 'active' : '' ?>">
         <a class="nav-link" href="index.php?page=daftarAnggota">
           <i class="fas fa-fw fa-users"></i>
-          <span>Anggota</span>
+          <span>Data Anggota</span>
         </a>
       </li>
 
       <li class="nav-item <?= $page == 'daftarBuku' ? 'active' : '' ?>">
         <a class="nav-link" href="index.php?page=daftarBuku">
           <i class="fas fa-fw fa-book"></i>
-          <span>Buku</span>
+          <span>Data Buku</span>
         </a>
       </li>
 
       <li class="nav-item <?= $page == 'daftarTransaksi' ? 'active' : '' ?>">
         <a class="nav-link" href="index.php?page=daftarTransaksi">
           <i class="fas fa-fw fa-book-reader"></i>
-          <span>Transaksi</span>
+          <span>Data Transaksi</span>
         </a>
       </li>
 
@@ -193,14 +192,27 @@ if (!isset($_SESSION['username'])) {
                 include "Pages/Buku/hapusBukuLogic.php";
                 break;
               case 'daftarTransaksi':
-                include "Pages/Buku/daftarTransaksi.php";
+                include "Pages/Transaksi/daftarTransaksi.php";
                 break;
               case 'tambahTransaksi':
-                include "Pages/Anggota/tambahTransaksi.php";
+                include "Pages/Transaksi/tambahTransaksi.php";
+                break;
+              case 'tambahTransaksiLogic':
+                include "Pages/Transaksi/tambahTransaksiLogic.php";
                 break;
               case 'editTransaksi':
-                include "Pages/Anggota/editTransaksi.php";
+                include "Pages/Transaksi/editTransaksi.php";
                 break;
+              case 'editTransaksiLogic':
+                include "Pages/Transaksi/editTransaksiLogic.php";
+                break;
+              case 'hapusTransaksiLogic':
+                include "Pages/Transaksi/hapusTransaksiLogic.php";
+                break;
+              case 'tes':
+                include "Pages/tes.php";
+                break;
+
 
               default:
                 echo "Maaf, Halaman Tidak Ditemukan";
