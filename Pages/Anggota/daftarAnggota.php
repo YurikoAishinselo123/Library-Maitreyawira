@@ -33,7 +33,7 @@
           <td><?php echo $data['id_anggota']; ?></td>
           <td><?php echo $data['NIS']; ?></td>
           <td><?php echo $data['nama_anggota']; ?></td>
-          <td><?php echo $data['tanggal_lahir']; ?></td>
+          <td><?php echo date("d M Y", strtotime($data['tanggal_lahir'])); ?></td>
           <td><?php echo $data['jenis_kelamin']; ?></td>
           <td class="text-center">
             <a href="index.php?page=editAnggota&id=<?php echo $data['id_anggota']; ?>"

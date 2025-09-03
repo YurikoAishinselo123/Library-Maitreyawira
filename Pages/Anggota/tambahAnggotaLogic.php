@@ -8,6 +8,15 @@ if (isset($_POST['proses'])) {
     $jenis_kelamin = $_POST['jenis_kelamin'];
     $NIS = $_POST['NIS'];
 
+    $today = date("Y-m-d");
+    if ($tanggal_lahir > $today) {
+        echo "<script>
+                alert('Tanggal lahir tidak boleh setelah hari ini!');
+                window.location='index.php?page=tambahAnggota';
+              </script>";
+        exit;
+    }
+
     $sql = "INSERT INTO tabel_anggota (nama_anggota, tanggal_lahir, jenis_kelamin, NIS) 
             VALUES ('$nama_anggota', '$tanggal_lahir', '$jenis_kelamin', '$NIS')";
     $query = mysqli_query($db, $sql);
