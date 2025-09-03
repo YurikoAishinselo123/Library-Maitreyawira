@@ -9,6 +9,15 @@ if (isset($_POST['proses'])) {
     $nisn = $_POST['nisn'];
     $stok_buku = $_POST['stok_buku'];
 
+    $currentYear = date("Y");
+    if ($tahun_terbit > $currentYear) {
+        echo "<script>
+                alert('Tahun terbit tidak boleh lebih dari $currentYear!');
+                window.location='index.php?page=tambahBuku';
+              </script>";
+        exit;
+    }
+
     $sql = "INSERT INTO tabel_buku (judul_buku, penulis_buku, penerbit_buku, tahun_terbit, nisn, stok_buku) 
             VALUES ('$judul_buku', '$penulis_buku', '$penerbit_buku', '$tahun_terbit', '$nisn', '$stok_buku')";
 
@@ -16,11 +25,11 @@ if (isset($_POST['proses'])) {
 
     if ($query) {
         echo "<script>
-            alert('Buku berhasil ditambahkan!');
-            window.location='index.php?page=daftarBuku';
-        </script>";
+                alert('Buku berhasil ditambahkan!');
+                window.location='index.php?page=daftarBuku';
+              </script>";
     } else {
-        die("Query Error: " . mysqli_error($db));
+        die('Query Error: ' . mysqli_error($db));
     }
 }
 ?>

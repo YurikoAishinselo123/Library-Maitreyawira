@@ -1,10 +1,10 @@
 <form method="post" action="index.php?page=tambahAnggotaLogic" enctype="multipart/form-data">
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h2 class="h3 mb-0 text-gray-800">Tambah Anggota</h2>
-        <div class="d-flex justify-content-end mt-4">
-            <a href="index.php?page=daftarAnggota" class="btn btn-danger px-4 py-2 mr-2">Cancel</a>
-            <input type="submit" name="proses" value="Tambah" class="btn btn-primary px-4 py-2">
-        </div>
+        <h3 class="h3 mb-0 text-gray-800">Anggota Baru</h2>
+            <div class="d-flex justify-content-end">
+                <a href="index.php?page=daftarAnggota" class="btn btn-danger px-4 py-2 mr-2">Cancel</a>
+                <input type="submit" name="proses" value="Tambah" class="btn btn-primary px-4 py-2">
+            </div>
     </div>
 
     <div class="form-row">
@@ -21,7 +21,7 @@
     <div class="form-row">
         <div class="col-md-6 mb-3">
             <label><b>Tanggal Lahir</b></label>
-            <input type="date" name="tanggal_lahir" class="form-control" required>
+            <input type="date" name="tanggal_lahir" class="form-control" required max="<?= date('Y-m-d') ?>">
         </div>
     </div>
 
