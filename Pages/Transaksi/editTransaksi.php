@@ -71,12 +71,12 @@ $data = mysqli_fetch_array($query);
         <div class="col-md-6 mb-3">
             <label><b>Status Transaksi</b></label>
             <select name="status_transaksi" class="form-control" required>
-                <option value="Di pinjam" <?php if ($data['status_transaksi'] == "Di pinjam")
-                    echo "selected"; ?>>Di
-                    pinjam</option>
-                <option value="Di kembalikan" <?php if ($data['status_transaksi'] == "Di kembalikan")
+                <option value="Dipinjam" <?php if ($data['status_transaksi'] == "Dipinjam")
                     echo "selected"; ?>>
-                    Di kembalikan</option>
+                    Dipinjam</option>
+                <option value="Dikembalikan" <?php if ($data['status_transaksi'] == "Dikembalikan")
+                    echo "selected"; ?>>
+                    Dikembalikan</option>
             </select>
         </div>
     </div>

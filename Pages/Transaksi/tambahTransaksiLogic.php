@@ -31,7 +31,7 @@ if (!$row || $row['stok_buku'] <= 0) {
 $sql = "INSERT INTO tabel_transaksi 
         (tanggal_peminjaman, id_buku, id_anggota, status_transaksi, tanggal_pengembalian) 
         VALUES 
-        ('$tanggal_peminjaman', '$id_buku', '$id_anggota', '$status_transaksi', $tanggal_pengembalian)";
+        ('$tanggal_peminjaman', '$id_buku', '$id_anggota', '$status_transaksi', '$tanggal_pengembalian')";
 
 $sql2 = "UPDATE tabel_buku SET stok_buku = stok_buku-1 WHERE id_buku = '$id_buku'";
 
