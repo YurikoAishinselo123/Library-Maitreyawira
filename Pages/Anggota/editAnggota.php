@@ -40,6 +40,17 @@ $data = mysqli_fetch_array($query);
 
     <div class="form-row">
         <div class="col-md-6 mb-3">
+            <label><b>Kelas</b></label>
+            <select class="form-control" name="kelas">
+                <option value="10" <?= ($data['kelas'] == "10") ? "selected" : "" ?>>10</option>
+                <option value="11" <?= ($data['kelas'] == "11") ? "selected" : "" ?>>11</option>
+                <option value="12" <?= ($data['kelas'] == "12") ? "selected" : "" ?>>12</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
             <label><b>Jenis Kelamin</b></label><br>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="jenis_kelamin" id="genderL" value="Laki-laki"

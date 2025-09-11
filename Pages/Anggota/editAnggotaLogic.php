@@ -4,6 +4,7 @@ if (isset($_POST['proses'])) {
 
     $kode = $_POST['id_anggota'];
     $nama_anggota = $_POST['nama_anggota'];
+    $kelas = $_POST['kelas'];
     $tanggal_lahir = $_POST['tanggal_lahir'];
     $jenis_kelamin = $_POST['jenis_kelamin'];
     $NIS = $_POST['NIS'];
@@ -19,6 +20,7 @@ if (isset($_POST['proses'])) {
 
     $sql = "UPDATE tabel_anggota 
             SET nama_anggota='$nama_anggota', 
+                kelas='$kelas', 
                 tanggal_lahir='$tanggal_lahir', 
                 jenis_kelamin='$jenis_kelamin', 
                 NIS='$NIS' 

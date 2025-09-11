@@ -1,4 +1,3 @@
-<!-- DataTales Example -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800">Daftar Transaksi</h1>
     <a href="index.php?page=tambahTransaksi" class="btn btn-primary btn-sm">
@@ -26,8 +25,8 @@
             include "koneksi.php";
             $nomor = 0;
             $sql = "SELECT * FROM tabel_transaksi t 
-            JOIN tabel_anggota a ON t.id_anggota = a.id_anggota 
-            JOIN tabel_buku b ON t.id_buku = b.id_buku";
+                    JOIN tabel_anggota a ON t.id_anggota = a.id_anggota 
+                    JOIN tabel_buku b ON t.id_buku = b.id_buku";
             $query = mysqli_query($db, $sql);
             while ($data = mysqli_fetch_array($query)) {
                 $nomor++;
@@ -39,7 +38,15 @@
                     <td><?php echo $data['id_buku']; ?></td>
                     <td><?php echo $data['judul_buku']; ?></td>
                     <td><?php echo date("d M Y", strtotime($data['tanggal_peminjaman'])); ?></td>
-                    <td><?php echo date("d M Y", strtotime($data['tanggal_pengembalian'])); ?></td>
+                    <td>
+                        <?php
+                        if (!empty($data['tanggal_pengembalian'])) {
+                            echo date("d M Y", strtotime($data['tanggal_pengembalian']));
+                        } else {
+                            echo ""; // tampil kosong jika NULL
+                        }
+                        ?>
+                    </td>
                     <td><?php echo $data['status_transaksi']; ?></td>
                     <td class="text-center">
                         <a href="index.php?page=editTransaksi&id=<?php echo $data['id_transaksi']; ?>"

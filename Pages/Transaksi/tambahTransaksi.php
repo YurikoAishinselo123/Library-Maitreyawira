@@ -49,7 +49,7 @@
 
         <div class="col-md-6 mb-3">
             <label><b>Status Peminjaman</b></label>
-            <input type="text" name="status_transaksi" class="form-control" value="Di pinjam" readonly>
+            <input type="text" name="status_transaksi" class="form-control" value="Dipinjam" readonly>
         </div>
     </div>
 
