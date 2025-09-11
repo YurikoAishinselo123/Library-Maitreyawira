@@ -4,6 +4,7 @@ if (isset($_POST['proses'])) {
 
 
     $nama_anggota = $_POST['nama_anggota'];
+    $kelas = $_POST['kelas'];
     $tanggal_lahir = $_POST['tanggal_lahir'];
     $jenis_kelamin = $_POST['jenis_kelamin'];
     $NIS = $_POST['NIS'];
@@ -17,8 +18,8 @@ if (isset($_POST['proses'])) {
         exit;
     }
 
-    $sql = "INSERT INTO tabel_anggota (nama_anggota, tanggal_lahir, jenis_kelamin, NIS) 
-            VALUES ('$nama_anggota', '$tanggal_lahir', '$jenis_kelamin', '$NIS')";
+    $sql = "INSERT INTO tabel_anggota (nama_anggota, kelas, tanggal_lahir, jenis_kelamin, NIS) 
+            VALUES ('$nama_anggota', '$kelas', '$tanggal_lahir', '$jenis_kelamin', '$NIS')";
     $query = mysqli_query($db, $sql);
 
     if ($query) {

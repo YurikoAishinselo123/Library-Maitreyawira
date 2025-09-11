@@ -20,6 +20,15 @@
 
     <div class="form-row">
         <div class="col-md-6 mb-3">
+            <label><b>Kelas</b></label>
+            <select class="form-control" name="kelas" required>
+                <option value="" disabled selected>Pilih Kelas</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+        </div>
+        <div class="col-md-6 mb-3">
             <label><b>Tanggal Lahir</b></label>
             <input type="date" name="tanggal_lahir" class="form-control" required max="<?= date('Y-m-d') ?>">
         </div>
