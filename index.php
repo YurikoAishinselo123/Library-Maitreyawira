@@ -19,7 +19,6 @@ if (!isset($_SESSION['username'])) {
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>SB Admin 2 - Dashboard</title>
 
   <!-- Custom fonts for this template-->
   <link href="Global/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
@@ -42,7 +41,10 @@ if (!isset($_SESSION['username'])) {
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+        <div class="sidebar-brand-text mx-3">
+          Library
+          <div class="small">Maitreyawira</div>
+        </div>
       </a>
 
       <!-- Divider -->
@@ -216,7 +218,7 @@ if (!isset($_SESSION['username'])) {
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2021</span>
+            <span>Copyright &copy; Uvers 2021</span>
           </div>
         </div>
       </footer>
